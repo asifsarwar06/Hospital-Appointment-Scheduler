@@ -18,10 +18,12 @@ export default function WeekView({ startDate, appointments }) {
           <div style={{ padding: 8, borderRight: '1px solid #eee' }}>Time</div>
           {days.map(d => <div key={d.toISOString()} style={{ padding: 8, borderRight: '1px solid #eee' }}>{format(d, 'EEE dd')}</div>)}
         </div>
+
         <div style={{ display: 'grid', gridTemplateColumns: '80px repeat(7, 1fr)' }}>
           <div style={{ padding: 8, borderRight: '1px solid #eee' }}>
             {Array.from({ length: 20 }).map((_, i) => <div key={i} className="time-slot">{8 + Math.floor(i / 2)}:{i % 2 === 0 ? '00' : '30'}</div>)}
           </div>
+
           {days.map((d, dayIndex) => (
             <div key={d.toISOString()} style={{ minHeight: '720px', position: 'relative', borderRight: '1px solid #f3f4f6' }}>
               {appointments.filter(a => new Date(a.startTime).toDateString() === d.toDateString()).map(apt => {
