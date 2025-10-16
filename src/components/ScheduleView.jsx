@@ -23,7 +23,7 @@ export default function ScheduleView({ selectedDoctorId, onDoctorChange }) {
         </div>
         <div className="controls">
           <DoctorSelector selectedId={selectedDoctorId} onChange={onDoctorChange} />
-          <input className="date-input" type="date" value={date.toISOString().slice(0,10)} onChange={e => setDate(new Date(e.target.value))} />
+          <input className="date-input" type="date" value={date.toISOString().slice(0, 10)} onChange={e => setDate(new Date(e.target.value))} />
         </div>
         <div style={{ marginTop: 12 }}>
           <button onClick={() => setView('day')}>Day View</button>

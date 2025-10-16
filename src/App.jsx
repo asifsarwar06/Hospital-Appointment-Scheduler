@@ -8,7 +8,7 @@ export default function App() {
   return (
     <div className="app-container">
       <header>
-        <h1>Hospital Appointment Scheduler (React)</h1>
+        <h1>Hospital Appointment Scheduler</h1>
       </header>
       <main>
         <ScheduleView

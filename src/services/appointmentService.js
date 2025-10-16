@@ -3,7 +3,7 @@ import { appointments as mockAppointments } from '../data/mockData'
 export const AppointmentService = {
   getAppointmentsByDoctorAndDate: async (doctorId, date) => {
     const start = new Date(date)
-    start.setHours(0,0,0,0)
+    start.setHours(0, 0, 0, 0)
     const end = new Date(start)
     end.setDate(end.getDate() + 1)
     return new Promise(resolve => {

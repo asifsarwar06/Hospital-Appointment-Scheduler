@@ -14,7 +14,7 @@ export default function WeekView({ startDate, appointments }) {
   return (
     <div className="main-card">
       <div style={{ overflowX: 'auto' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '80px repeat(7, 1fr)' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '80px repeat(1, 1fr)' }}>
           <div style={{ padding: 8, borderRight: '1px solid #eee' }}>Time</div>
           {days.map(d => <div key={d.toISOString()} style={{ padding: 8, borderRight: '1px solid #eee' }}>{format(d, 'EEE dd')}</div>)}
         </div>
